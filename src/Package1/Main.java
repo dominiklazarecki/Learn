@@ -15,28 +15,24 @@ public class Main {
 //
 //       // System.out.println(computer.getChoice());
 
+
+
+//        System.out.println("Wybor gracza nr 1: ");
+//        String player1Input = scanner.nextLine();
+//        System.out.println("Wybor gracza nr 2: ");
+//        String player2Input = scanner.nextLine();
+
+
+        Gamer gamer = new Gamer();
+        gamer.takeChoice();
+        Computer computer = new Computer();
+        computer.takeChoice();
+        GameService gameService = new GameService(gamer, computer);
+
         Game game = new Game();
-
-        Scanner scanner = new Scanner(System.in);
-
-
-        System.out.println("Wybor gracza nr 1: ");
-        String player1Input = scanner.nextLine();
-        System.out.println("Wybor gracza nr 2: ");
-        String player2Input = scanner.nextLine();
-
-        game.remis(player1Input , player2Input);
-        game.winPlayer1(player1Input , player2Input);
-        game.winPlayer2(player1Input , player2Input);
-
-
-
-
-
-
-
-
-        
+        game.remis(gameService.gamerChoice(), gameService.computerChoice());
+        game.winPlayer1(gameService.gamerChoice(), gameService.computerChoice());
+        game.winPlayer2(gameService.gamerChoice(), gameService.computerChoice());
 
 
     }

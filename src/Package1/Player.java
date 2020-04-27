@@ -1,15 +1,20 @@
 package Package1;
 
-public class Player {
+public abstract class Player {
 
    private String name;
    private int choice;
 
-    public Player(String name)
+    Player()
     {
-        this.name = name;
 
     }
+    Player(String name)
+    {
+        this.name = name;
+    }
+
+    public abstract  void takeChoice();
 
     public String getName()
     {
