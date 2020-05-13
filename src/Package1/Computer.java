@@ -1,22 +1,22 @@
 package Package1;
 
-import java.util.Random;
 
 public class Computer extends Player {
-    private Random random = new Random();
+
 
     public Computer() {
         super("Computer");
 
     }
     @Override
-    public void takeChoice()
+    public void takeChoice(int choice)
     {
-        setChoice(random.nextInt(3));
+        setChoice(choice);
     }
 
     @Override
-    public int getChoice() {
+    public int getChoice()
+    {
         return super.getChoice();
     }
 }

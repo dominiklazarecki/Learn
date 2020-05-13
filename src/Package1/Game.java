@@ -1,72 +1,53 @@
 package Package1;
 
-import java.util.Scanner;
 
 public class Game {
 
-    public Player kamienPapierNozyce(Gamer gamer, Computer computer)
-    {
-
-
-        return null;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-        public void remis(String player1Input, String player2Input)
+        public void resultForRock(String player1Input, String player2Input)
         {
-            if(player1Input.equalsIgnoreCase("kamien") && player2Input.equalsIgnoreCase("kamien"))
+            if(player1Input.equalsIgnoreCase(Figure.ROCK.getFigureName()) && player2Input.equalsIgnoreCase(Figure.ROCK.getFigureName()))
             {
                 System.out.println("Remis");
             }
-            else if( player1Input.equalsIgnoreCase("nozyczki") && player2Input.equalsIgnoreCase("nozyczki"))
+            else if( player1Input.equalsIgnoreCase(Figure.ROCK.getFigureName()) && player2Input.equalsIgnoreCase(Figure.SCISSORS.getFigureName()))
             {
-                System.out.println("Remis");
+                System.out.println("Wygrywa Kamien");
             }
-            else if(player1Input.equalsIgnoreCase("papier") && player2Input.equalsIgnoreCase("papier"))
+            else if(player1Input.equalsIgnoreCase(Figure.ROCK.getFigureName()) && player2Input.equalsIgnoreCase(Figure.PAPER.getFigureName()))
             {
-                System.out.println("Remis");
+                System.out.println("Przegrywa Papier");
             }
         }
 
-        public void winPlayer1(String player1Input, String player2Input)
+        public void resultForPaper(String player1Input, String player2Input)
         {
-            if(player1Input.equalsIgnoreCase("kamien") && player2Input.equalsIgnoreCase("nozyczki"))
+            if(player1Input.equalsIgnoreCase(Figure.PAPER.getFigureName()) && player2Input.equalsIgnoreCase(Figure.PAPER.getFigureName()))
             {
-                System.out.println("Wygrywa gracz numer 1");
+                System.out.println("Remis");
             }
-            if(player1Input.equalsIgnoreCase("nozyczki") && player2Input.equalsIgnoreCase("papier"))
+            if(player1Input.equalsIgnoreCase(Figure.PAPER.getFigureName()) && player2Input.equalsIgnoreCase(Figure.SCISSORS.getFigureName()))
             {
-                System.out.println("Wygrywa gracz numer 1");
+                System.out.println("Wygrywają Nożyczki");
             }
-            if(player1Input.equalsIgnoreCase("papier") && player2Input.equalsIgnoreCase("kamien"))
+            if(player1Input.equalsIgnoreCase(Figure.PAPER.getFigureName()) && player2Input.equalsIgnoreCase(Figure.ROCK.getFigureName()))
             {
-                System.out.println("Wygrywa gracz numer 1");
+                System.out.println("Wygrywa Papier");
             }
         }
 
-        public void winPlayer2(String player1Input, String player2Input)
+        public void resultForScissors(String player1Input, String player2Input)
         {
-            if(player1Input.equalsIgnoreCase("kamien") && player2Input.equalsIgnoreCase("papier"))
+            if(player1Input.equalsIgnoreCase(Figure.SCISSORS.getFigureName()) && player2Input.equalsIgnoreCase(Figure.SCISSORS.getFigureName()))
             {
-                System.out.println("Wygrywa gracz numer 2");
+                System.out.println("Remis");
             }
-            if(player1Input.equalsIgnoreCase("nozyczki") && player2Input.equalsIgnoreCase("kamien"))
+            if(player1Input.equalsIgnoreCase(Figure.SCISSORS.getFigureName()) && player2Input.equalsIgnoreCase(Figure.PAPER.getFigureName()))
             {
-                System.out.println("Wygrywa gracz numer 2");
+                System.out.println("Wygrywa Nożyczki");
             }
-            if(player1Input.equalsIgnoreCase("papier") && player2Input.equalsIgnoreCase("nozyczki"))
+            if(player1Input.equalsIgnoreCase(Figure.SCISSORS.getFigureName()) && player2Input.equalsIgnoreCase(Figure.ROCK.getFigureName()))
             {
-                System.out.println("Wygrywa gracz numer 2");
+                System.out.println("Wygrywa Kamien");
             }
         }
 

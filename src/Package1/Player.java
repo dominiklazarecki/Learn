@@ -14,7 +14,7 @@ public abstract class Player {
         this.name = name;
     }
 
-    public abstract  void takeChoice();
+    public abstract  void takeChoice(int choice);
 
     public String getName()
     {
